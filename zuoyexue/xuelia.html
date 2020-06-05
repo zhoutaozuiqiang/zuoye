@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{ 
+			padding: 0;
+			margin: 0;
+		}
+		a{
+			text-decoration: none;
+		}
+		ul{
+			list-style: none;
+		}
+		.xueli{
+			margin-left: 100px;
+			margin-top: 33px;
+			margin-bottom: 29px;
+			width:170px;
+			height:39px;
+			font-size:40px;
+			font-family:Microsoft YaHei;
+			font-weight:bold;
+			color:rgba(0,164,255,1);
+			float: left;
+		}
+		.nav{
+			margin:42px 0 0px 71px;
+			height:18px;
+			font-size:18px;
+			font-family:Microsoft YaHei;
+			font-weight:400;
+			float: left;
+		}
+		.nav>a{
+			display: block;
+			margin-right: 30px;
+			padding: 10px 8px;
+			color:rgba(5,5,5,1);
+			float: left;
+		}
+		.nav>a:hover{
+			border-bottom: 2px solid rgba(0,164,255,1);
+		}
+		.shurukuang{
+			width:411px;
+            height:40px;
+            margin-top: 31px;
+            float:right;
+            position: relative;
+		}
+		input{
+			display: block;
+			height:40px;
+			width: 411px;
+			float: right;
+			border: 1px solid rgba(0,164,255,1);
+		}
+		.search{
+			font-size:14px;
+			font-family:Microsoft YaHei;
+			font-weight:400;
+			color:rgba(191,191,191,1);
+			line-height:31px;
+		}
+		.placeholder{
+			display: inline-block;
+			height:42px;
+			width: 52px;
+			font-size:14px;
+			font-family:Microsoft YaHei;
+			font-weight:400;
+			color:rgba(191,191,191,1);
+			line-height:31px;
+			position: absolute;
+			left: 360px;
+		}
+		.fuhao{
+			width: 51px;
+			height: 41px;
+			background:rgba(0,164,255,1);
+			float:left;
+			position: absolute;
+			left: 360px;
+			top:0;
+		}
+		#img{
+			height: 19px;
+			width: 19px;
+			margin: 11px 15px 11px 17px;
+		}
+		.gerenzhongxin{
+			margin-top: 44px;
+			margin-left: 31px;
+			margin-right: 250px;
+			width:60px;
+			height:12px;
+			font-size:14px;
+			font-family:Microsoft YaHei;
+			font-weight:400;
+			color:rgba(102,102,102,1);
+			float: right;
+		}
+		.shurukuang ul{
+			display: none;
+		}
+		.shurukuang:active ul{
+			display: block;
+			width:270px;
+			height:166px;
+			background:rgba(255,255,255,1);
+			box-shadow:0px 2px 5px 0px rgba(118,118,118,0.5);
+			position: absolute;
+			left: -59px;
+			top: 42px;
+		}
+		.sou{
+			width: 48px;
+			height:13px;
+			font-size:12px;
+			font-family:Microsoft YaHei;
+			font-weight:400;
+			color:rgba(0,164,255,1);
+			line-height:20px;
+			margin-left: 18px;
+			margin-top: 14px;
+		}
+		.suo{
+			width: 36px;
+			font-size:12px;
+			font-family:Microsoft YaHei;
+			font-weight:400;
+			color:rgba(141,141,141,1);
+			line-height:20px;
+			margin-left: 18px;
+		}
+		.jichu{
+			width: 1518px;
+			height:420px;
+			background:rgba(28,3,108,0.8);
+			float: left;
+			background-image: url(Z`$DC04{69_6X019KQI[@8Y.png);
+			background-position: 420px 0;
+			background-repeat: no-repeat; 
+		}
+		.lie{
+			margin-left: 100px;
+			width:190px;
+			height:420px;
+			background:rgba(0,0,0,0.3);
+			float: left;
+		}
+		.lie ul li{
+			font-size:14px;
+			font-family:Microsoft YaHei;
+			font-weight:400;
+			line-height:44px;
+			padding-bottom: 1px;
+		}
+		.nav1{
+			width:1200px;
+			height:60px;
+			margin-left: 100px;
+			background:rgba(255,255,255,1);
+			box-shadow:0px 2px 3px 0px rgba(118,118,118,0.2);
+			float: left;
+		}
+		.wenzi{
+			display: inline-block;
+			margin-left: 34px;
+			height:18px;
+			width: 98px;
+			margin-top: 21px;
+			border-right:1px solid rgba(191,191,191,1);
+			font-size:16px;
+			font-family:Microsoft YaHei;
+			font-weight:bold;
+			color:black;
+			float: left;
+		}
+		.wenzi:hover{
+			color:rgba(0,164,255,1);
+		}
+		.img{
+			width:225px;
+			height:450px;
+			background:rgba(255,255,255,1);
+			box-shadow:0px 2px 5px 0px rgba(118,118,118,0.5);
+			float: left;
+			margin-left: 15px;
+			margin-bottom: 15px;
+		}
+		.img p{
+			display: block;
+			padding-top:24px;
+			padding-left: 23px;
+			width:185px;
+			height:34px;
+			font-size:15px;
+			font-family:Microsoft YaHei;
+			font-weight:400;
+			color:rgba(5,5,5,1);
+			line-height:20px;
+		}
+		.span{
+			margin-top: 18px;
+			display: block;
+			padding-left: 23px;
+			width:119px;
+			height:13px;
+			font-size:12px;
+			font-family:Microsoft YaHei;
+			font-weight:400;
+			color:rgba(255,124,45,1);
+		}
+		.laoshi{
+			width:220px;
+			height:122px;
+			background:rgba(0,0,0,1);
+			opacity:0.5;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<div style="background-position: center center;">
+			<div class="xueli clear">娱乐新闻</div>
+			<div class="nav">
+				<a href="#">演员</a>
+				<a href="#">歌手</a>
+				<a href="#">主持人</a>
+			</div>
+			<div class="gerenzhongxin clear">娱乐中心</div>
+			<div class="shurukuang clear">
+				<form>
+					<input type="text" placeholder="请输入关键词" class="search">
+					<input type="button" class="placeholder" style="border: none;">
+				</form>
+				<ul>
+					<div style="width: 270px;height:30px;border-bottom: 1px dotted rgba(141,141,141,1);">
+						<li class="sou" style="float: left;margin-bottom: 8px;">历史搜索</li>
+						<li class="suo" style="float: right;margin-top: 14px;">清空</li>
+					</div>
+					<li class="suo">杨幂</li>
+					<li class="sou">热门搜索</li>
+					<li class="suo" style="margin-top: 8px;">肖战</li>
+					<li class="suo">何炅</li>
+					<li class="suo">王一博</li>
+				</ul>
+				<div class="fuhao clear">
+					<img src="fa-search.png" id="img" />
+				</div>
+			</div>
+		</div>
+		<div   class="jichu">
+			<div class="lie">
+				<ul>
+					<li><a href="#" style="color:rgba(0,180,255,1); padding-top: 5px;padding-left: 20px;">前端开发</a><img src="形状 3 拷贝.png" style="padding-right:23px;float:right;padding-top: 15px;"></li>
+					<li><a href="#" style="color:white;padding-left: 20px;">娱乐新闻</a><img src="形状 3 拷贝.png" style="padding-right:23px;float:right;padding-top: 15px;"></li>
+					<li><a href="#" style="color:white;padding-left: 20px;">电影新闻</a><img src="形状 3 拷贝.png" style="padding-right:23px;float:right;padding-top: 15px;"></li>
+					<li><a href="#" style="color:white;padding-left: 20px;">电视新闻</a><img src="形状 3 拷贝.png" style="padding-right:23px;float:right;padding-top: 15px;"></li>
+					<li><a href="#" style="color:white;padding-left: 20px;">商业新闻</a><img src="形状 3 拷贝.png" style="padding-right:23px;float:right;padding-top: 15px;"></li>
+					<li><a href="#" style="color:white;padding-left: 20px;">豪门秘辛</a><img src="形状 3 拷贝.png" style="padding-right:23px;float:right;padding-top: 15px;"></li>
+					<li><a href="#" style="color:white;padding-left: 20px;">新剧首发</a><img src="形状 3 拷贝.png" style="padding-right:23px;float:right;padding-top: 15px;"></li>
+					<li><a href="#" style="color:white;padding-left: 20px;">选秀热点</a><img src="形状 3 拷贝.png" style="padding-right:23px;float:right;padding-top: 15px;"></li>
+					<li><a href="#" style="color:white;padding-left: 20px;">其他</a><img src="形状 3 拷贝.png" style="padding-right:23px;float:right;padding-top:15px;"></li>
+				</ul>
+			</div>
+		</div>
+		<div class="nav1">
+			<a href="#" class="wenzi">热门推荐</a>
+			<a href="#" class="wenzi">杨幂</a>
+			<a href="#" class="wenzi">魏大勋</a>
+			<a href="#" class="wenzi">邓伦</a>
+			<a href="#" class="wenzi">陈赫</a>
+			<a href="#" class="wenzi">谢依霖</a>
+			<a href="#" class="wenzi">张国伟</a>
+			<a href="#" style="height:18px;font-size:16px;font-family:Microsoft YaHei;font-weight:bold;color:rgba(0,164,255,1);margin-right: 61px;margin-top:21px;float: right;" >修改兴趣</a>
+		</div>
+		<div style="float: left;width: 1200px;height: 77px;margin-left: 100px;">
+			<p style="width:80px;height:19px;font-size:20px;font-family:Microsoft YaHei;font-weight:400;color:rgba(73,73,73,1);display: block;float: left;margin-top: 37px;">女星</p>
+			<p style="width:48px;height:13px;font-size:12px;font-family:Microsoft YaHei;font-weight:400;color:rgba(165,165,165,1);display: block;margin-right:31px;float: right;margin-top: 31px;">查看全部</p>
+		</div>
+		<div style="float: left;width: 1200px;margin-left: 80px;">
+			<div class="img"><img src="((3SBR0J]W1UJGCOH3DF`LM.png" style=" width: 225px;height: 315px;  "><p>演员郑爽</p><p class="span"><span style="color: #FF7C2D">主要作品</span> · 微微一笑很倾城</p></div>
+			<div class="img"><img src="AH8H(DX$JZ}JX{SNXJ8LC{G.png" style=" width: 225px;height: 315px;margin-left: 0px;"><p>演员赵丽颖</p><p class="span"><span style="color: #FF7C2D">主要作品</span> · 楚乔传</p></div>
+			<div class="img"><img src="F$OC%YM6GK{1WRDD`NTF4[H.png" style="width: 225px;height: 315px;"><p>演员唐嫣</p><p class="span"><span style="color: #FF7C2D">主要作品</span> · 仙剑奇侠传</p></div>
+			<div class="img"><img src="JYBFXJPH$D]~FL)(FOVESEC.png" style="width: 225px;height: 315px;  "><p>演员杨幂</p><p class="span"><span style="color: #FF7C2D">主要作品</span> · 扶摇</p></div>
+			<div class="img"><img src="N[[](NRQ51WLTNDQ)_[6(GS.png" style=" width: 225px;height: 315px;  "><p>演员迪丽热巴</p><p class="span"><span style="color: #FF7C2D">主要作品</span> · 一千零一夜<p></div>
+		</div>
+		<div style="float: left;width: 1200px;height: 77px;">
+			<p style="width:160px;height:19px;font-size:20px;font-family:Microsoft YaHei;font-weight:400;color:rgba(73,73,73,1);display:block; color:black;margin-left: 100px;float: left;margin-top: 37px;">男星</p>
+			<a href="#" style="display:block;width:50px;height:17px;font-size:16px;font-family:Microsoft YaHei;font-weight:400;color:#00A4FF;float: left;margin-left:291px;margin-top: 41px;">电影</a>
+			<a href="#" style="display:block;width:50px;height:17px;font-size:16px;font-family:Microsoft YaHei;font-weight:400;color:black;float: left;margin-left:30px;margin-top: 41px; ">电视</a>
+			<a href="#" style="display:block;width:50px;height:17px;font-size:16px;font-family:Microsoft YaHei;font-weight:400;color:black;float: left;margin-left:30px;margin-top: 41px; ">综艺</a>
+			<a href="#" style="display:block;width:50px;height:17px;font-size:16px;font-family:Microsoft YaHei;font-weight:400;color:black;float: left;margin-left:30px;margin-top: 41px; ">真人秀</a>			
+			<p style="width:48px;height:13px;font-size:12px;font-family:Microsoft YaHei;font-weight:400;color:rgba(165,165,165,1);display: block;margin-right:31px;float: right;margin-top: 31px;">查看全部</p>
+		</div>
+		<div style="float: left;width: 1200px; margin-left: 80px;">
+			<div class="img"><img src="93OITDIOK1O9]0NX(A784FP.png" style=" width: 228px;height: 315px;  "><p>歌手张杰</p><p class="span"><span style="color: #FF7C2D">主要作品</span> · 第一夫人</p></div>
+			<div class="img"><img src="J_II_E$EAYB2FQLD@5[`_8I.png" style=" width: 228px;height: 315px; "><p>歌手张艺兴</p><p class="span"><span style="color: #FF7C2D">主要作品</span> · sheep</p></div>
+			<div class="img"><img src="HMW2AMH7TDWYRA@C7IQ}~}C.png" style="width: 228px;height: 315px;"><p>演员胡歌</p><p class="span"><span style="color: #FF7C2D">主要作品</span> · 琅琊榜</p></div>
+			<div class="img"><img src="]H54EC@U3UHG6NDY0P5O]JT.png" style="width: 228px;height: 315px;"><p>歌手王源</p><p class="span"><span style="color: #FF7C2D">主要作品</span> · 骄傲</p></div>
+			<div class="img"><img src="%@LWM{8[M(`~`F5F`X4X0)E.png" style="width: 228px;height: 315px;  "><p>演员钟汉良</p><p class="span"><span style="color: #FF7C2D">主要作品</span> · 天涯明月刀</p></div>
+		</div>
+		<div style="height:417px;background:rgba(255,255,255,1);float: left;margin-top: 73px;">
+			<div style="float: left;">
+				<div style="margin-left: 180px;height:36px;font-size:36px;font-family:Microsoft YaHei;font-weight:bold;color:rgba(0,164,255,1);line-height:21px;margin-top: 124px;width: 372px;">娱乐在线</div>
+				<div style="width:382px;height:12px;font-size:12px;font-family:SimSun;font-weight:400;color:rgba(102,102,102,1);line-height:18px;margin-top: 35px;margin-left: 182px;">致力于提供最新的娱乐新闻，让你们了解爱豆</div>
+				<div style="height:36px;border: 1px solid rgba(0,164,255,1);margin-left: 181px;margin-top: 33px;width: 120px;"><div style="width:63px;height:15px;font-size:16px;font-family:Microsoft YaHei;font-weight:400;color:rgba(0,164,255,1);line-height:18px;margin-top: 11px;margin-left: 27px;">下载APP</div></div>
+			</div>
+			<div style="margin-left: 103px;margin-top: 129px;float: left;">
+				<ul style="float: left;">
+					<li style="height:17px;font-size:16px;font-family:Microsoft YaHei;font-weight:400;color:rgba(51,51,51,1);line-height:21px;">关于娱乐网</li>
+					<li style="margin-top: 15px;">关于</li>
+					<li>管理团队</li>
+					<li>工作机会</li>
+					<li>客户服务</li>
+					<li>帮助</li>
+				</ul>
+				<ul style="float: left;">
+					<li style="height:17px;font-size:16px;font-family:Microsoft YaHei;font-weight:400;color:rgba(51,51,51,1);line-height:21px;margin-left: 146px;">新手指南</li>
+					<li style="margin-left: 146px;margin-top: 15px;">如何注册</li>
+					<li style="margin-left: 146px;">如何搜索</li>
+					<li style="margin-left: 146px;">如何提供材料</li>
+					<li style="margin-left: 146px;">娱乐新闻是什么</li>
+					<li style="margin-left: 146px;">认证未通过怎么办</li>
+				</ul>
+				<ul style="float: left;">
+					<li style="height:17px;font-size:16px;font-family:Microsoft YaHei;font-weight:400;color:rgba(51,51,51,1);line-height:21px;margin-left: 152px;">合作伙伴</li>
+					<li style="margin-left: 152px;margin-top: 15px;">合作机构</li>
+					<li style="margin-left: 152px;">合作导师</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</html>
